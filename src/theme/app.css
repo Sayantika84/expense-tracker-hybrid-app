@@ -1,0 +1,131 @@
+.boot-screen {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  height: 100%; padding: 24px; text-align: center; background: var(--ion-background-color);
+}
+
+ion-title { font-weight: 700; }
+
+/* ---------- Dashboard ---------- */
+.balance-card {
+  margin: 8px 16px 4px;
+  padding: 20px;
+  border-radius: 24px;
+  color: #fff;
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 60%, #a855f7 100%);
+  box-shadow: 0 12px 28px rgba(79, 70, 229, 0.35);
+}
+.balance-card .greeting { margin: 0 0 12px; opacity: 0.9; font-size: 14px; }
+.balance-card .label { margin: 0; opacity: 0.8; font-size: 13px; }
+.balance-card h1 { margin: 4px 0 18px; font-size: 34px; font-weight: 800; letter-spacing: -0.5px; }
+.balance-split { display: flex; gap: 12px; }
+.balance-split > div {
+  flex: 1; display: flex; align-items: center; gap: 10px;
+  padding: 10px; border-radius: 16px; background: rgba(255, 255, 255, 0.15);
+}
+.balance-split small { display: block; opacity: 0.85; font-size: 11px; }
+.balance-split strong { font-size: 15px; }
+.pill {
+  display: grid; place-items: center; flex-shrink: 0;
+  width: 30px; height: 30px; border-radius: 50%; background: #fff;
+}
+.pill.income { color: #16a34a; }
+.pill.expense { color: #dc2626; }
+
+.budget-card { border-radius: 18px; }
+.budget-card p { margin-top: 4px; }
+.budget-row { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 14px; }
+.budget-card ion-progress-bar { height: 8px; border-radius: 8px; }
+.budget-hint { margin-top: 8px !important; font-size: 13px; }
+.budget-hint.danger { color: var(--ion-color-danger); }
+.budget-hint.warning { color: var(--ion-color-warning-shade); }
+
+.section-header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 8px 20px 0;
+}
+.section-header h3 { margin: 8px 0; font-size: 17px; font-weight: 700; }
+
+/* ---------- Transaction rows ---------- */
+.category-icon {
+  display: grid; place-items: center; flex-shrink: 0;
+  border-radius: 14px; font-size: 20px;
+}
+.tx-item ion-label h2 { font-weight: 600; font-size: 15px; }
+.tx-item ion-label p { font-size: 13px; }
+.tx-amount { font-weight: 700; font-size: 15px; }
+.tx-amount.income { color: var(--app-income); }
+.tx-amount.expense { color: var(--app-expense); }
+
+.empty-state { text-align: center; color: var(--app-muted); padding: 40px 24px; }
+.empty-state ion-icon { font-size: 56px; opacity: 0.5; }
+.empty-state.small { padding: 16px; }
+.fab-spacer { height: 88px; }
+
+/* ---------- Transactions page ---------- */
+.month-switcher {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  font-weight: 700; font-size: 16px; padding-top: 4px;
+}
+.month-switcher span { min-width: 140px; text-align: center; }
+.filters { padding: 0 16px; }
+.filters ion-select { margin-top: 4px; }
+.summary-strip {
+  display: flex; margin: 8px 16px; padding: 12px; border-radius: 16px;
+  background: var(--ion-item-background);
+}
+.summary-strip > div { flex: 1; text-align: center; }
+.summary-strip small { display: block; color: var(--app-muted); font-size: 12px; }
+.summary-strip strong { font-size: 15px; }
+.summary-strip .income { color: var(--app-income); }
+.summary-strip .expense { color: var(--app-expense); }
+.divider-total { font-size: 13px; color: var(--app-muted); }
+
+/* ---------- Add / edit form ---------- */
+.amount-input {
+  display: flex; align-items: center; justify-content: center;
+  margin: 24px 0 8px; font-size: 40px; font-weight: 800;
+}
+.amount-input.expense { color: var(--app-expense); }
+.amount-input.income { color: var(--app-income); }
+.amount-input ion-input {
+  --padding-start: 6px; max-width: 220px; font-size: 40px; font-weight: 800;
+}
+.section-label {
+  margin: 20px 4px 10px; font-size: 13px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.5px; color: var(--app-muted);
+}
+.category-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.category-chip {
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  padding: 10px 2px; border: 2px solid transparent; border-radius: 16px;
+  background: var(--ion-item-background); color: var(--ion-text-color);
+  font-size: 11px; font-family: inherit; cursor: pointer;
+}
+.category-chip.selected { border-color: var(--chip-color); }
+.category-chip span { line-height: 1.2; text-align: center; }
+.form-list { margin: 20px 0 0; }
+.payment-segment { background: var(--ion-item-background); border-radius: 14px; }
+
+/* ---------- Reports ---------- */
+.chart-box { position: relative; height: 240px; }
+.chart-box.doughnut { height: 220px; }
+.doughnut-center {
+  position: absolute; inset: 0; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; pointer-events: none;
+}
+.doughnut-center small { color: var(--app-muted); }
+.doughnut-center strong { font-size: 20px; color: var(--ion-text-color); }
+.legend-dot { width: 12px; height: 12px; border-radius: 50%; margin-right: 12px; }
+.legend-value { text-align: right; font-weight: 600; color: var(--ion-text-color); }
+.legend-value small { display: block; font-weight: 400; color: var(--app-muted); }
+ion-card { border-radius: 18px; }
+
+/* ---------- Settings ---------- */
+.icon-grid, .color-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; }
+.icon-option, .color-option {
+  border: 2px solid transparent; border-radius: 14px; background: none;
+  padding: 2px; display: grid; place-items: center; cursor: pointer;
+}
+.icon-option.selected { border-color: var(--ion-color-primary); }
+.color-option { aspect-ratio: 1; border-radius: 50%; }
+.color-option.selected { border-color: var(--ion-text-color, #000); box-shadow: inset 0 0 0 3px var(--ion-background-color); }

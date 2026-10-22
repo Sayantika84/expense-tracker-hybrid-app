@@ -1,0 +1,19 @@
+{
+  "appId": "com.mad.expensetracker",
+  "appName": "Expense Tracker",
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchAutoHide": false,
+      "backgroundColor": "#4f46e5",
+      "showSpinner": false
+    },
+    "CapacitorSQLite": {
+      "androidIsEncryption": false
+    },
+    "LocalNotifications": {
+      "smallIcon": "ic_stat_notify",
+      "iconColor": "#4f46e5"
+    }
+  }
+}
